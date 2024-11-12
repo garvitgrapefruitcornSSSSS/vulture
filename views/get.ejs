@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Plan</title>
+    <link rel="stylesheet" href="/styles.css"> <!-- Link to your CSS file if needed -->
+</head>
+<body>
+    <header>
+        <h1>Personalized Financial Plan</h1>
+    </header>
+    
+    <section>
+        <h2>Welcome, <%= user.name %>!</h2>
+        <p>Email: <%= user.email %></p>
+        <p>Phone: <%= user.phone %></p>
+        <p>Date of Birth: <%= user.dob.toDateString() %></p>
+    </section>
+
+    <section>
+        <h3>Your Financial Summary</h3>
+        <p>Monthly Income: ₹<%= user.monthly_income.toLocaleString() %></p>
+        <p>Monthly Expenses: ₹<%= user.monthly_expenses.toLocaleString() %></p>
+        <p>Savings Balance: ₹<%= user.savings_balance.toLocaleString() %></p>
+        <p>Loan Type: <%= user.loan_type %></p>
+        <p>Loan Balance: ₹<%= user.loan_balance.toLocaleString() %></p>
+        <p>EMI Amount: ₹<%= user.emi_amount.toLocaleString() %> (Duration: <%= user.emi_duration %> months)</p>
+    </section>
+
+    <section>
+        <h3>Investment Goals & Strategy</h3>
+        <p>Risk Tolerance: <%= user.risk_tolerance %></p>
+        <p>Investment Goals: <%= user.investment_goals %></p>
+        <p>Existing Investments: <%= user.existing_investments %></p>
+        <p>Investment Value: ₹<%= user.investment_value.toLocaleString() %></p>
+    </section>
+
+    <section>
+        <h3>Tax and Financial Goals</h3>
+        <p>Tax Bracket: <%= user.tax_bracket %></p>
+        <p>Tax-Saving Instruments: <%= user.tax_saving_instruments %></p>
+        <p>Financial Goals: <%= user.financial_goals %></p>
+        <p>Target Date for Goals: <%= user.target_date.toDateString() %></p>
+    </section>
+
+    <section>
+        <h3>Generated Financial Advice</h3>
+        <p><strong>Risk Level:</strong> <%= financePlan.riskLevel %></p>
+        <p><strong>Advice:</strong> <%= financePlan.advice %></p>
+    </section>
+
+    <footer>
+        <p>Generated with Horizon AI Financial Planner</p>
+    </footer>
+    <script>
+        function redirectTo(userId) {
+            window.location.href = `/generate-plan/${userId}`;
+        }
+    </script>
+    
+</body>
+</html>
+
+

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horizon - Invest in Future</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="fourth.js"></script>
+    <script src="js/form.js"></script>
+    <script src="get.js"></script></script>
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="brand">
+                <a href="#" class="brand-name">Horizon</a>
+                <span class="slogan">Invest in future</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="Chatbot.html">Chatbot</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <a href="signin.html" class="signin-btn">Sign In</a>
+            </div>
+        </nav>
+    </header>
+    <div class="banner">
+        <!-- Image Banner Placeholder -->
+        <h1>AI-Powered Wealth Planning for Every Indian Dream</h1>
+        <div class="banner-logo"><img src="Screenshot_2024-11-03_190850-removebg-preview.png" alt="" srcset=""></div>
+    </div>
+    <div class="container">
+    <div class="my-page">
+        <!-- Left Side Flip Cards -->
+        <div class="card-container">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <h3>Personalized Financial Planning</h3>
+                        <p>Get tailored financial guidance with AI-powered robo-advisors. Achieve your life goals, like
+                            home buying or retirement, with easy, goal-based investing suited to your income and
+                            aspirations.</p>
+                    </div>
+                    <div class="flip-card-back">
+                        <h3>Affordable Tax-Saving Tools</h3>
+                        <p>Save on taxes effortlessly! Our platform helps you choose the best tax-saving investments
+                            with a user-friendly calculator, making tax planning simple and effective.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <h3>Retirement Planning Simplified</h3>
+                        <p>Secure your future with our AI-driven retirement plans. Calculate how much to invest monthly
+                            to achieve a comfortable retirement based on your age and income.</p>
+                    </div>
+                    <div class="flip-card-back">
+                        <h3>Secure and Scalable Cloud Infrastructure</h3>
+                        <p>Powered by Vultr, our platform is secure, scalable, and optimized for performance. Your data
+                            stays protected while you enjoy seamless investment integration and financial insights.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Side Carousel -->
+        <div class="carousel">
+            <img src="image1.png" alt="Android UI Image 1" class="active">
+            <img src="image2.png" alt="Android UI Image 2">
+            <img src="image3.png" alt="Android UI Image 3">
+            <img src="image4.png" alt="Android UI Image 4">
+
+            <div class="dots">
+                <span class="dot active" onclick="showImage(0)"></span>
+                <span class="dot" onclick="showImage(1)"></span>
+                <span class="dot" onclick="showImage(2)"></span>
+                <span class="dot" onclick="showImage(3)"></span>
+            </div>
+        </div>
+    </div>
+        <script>
+            let currentIndex = 0;
+
+            function showImage(index) {
+                const images = document.querySelectorAll('.carousel img');
+                const dots = document.querySelectorAll('.dot');
+
+                // Remove 'active' class from current image and dot
+                images[currentIndex].classList.remove('active');
+                dots[currentIndex].classList.remove('active');
+
+                // Update the index to the selected image
+                currentIndex = index;
+
+                // Add 'active' class to the selected image and dot
+                images[currentIndex].classList.add('active');
+                dots[currentIndex].classList.add('active');
+            }
+
+            // Optional auto-rotate every 3 seconds
+            setInterval(() => {
+                const nextIndex = (currentIndex + 1) % 4;
+                showImage(nextIndex);
+            }, 3000);
+        </script>    
+        
+        
+
+
+<div class="fourth">
+        <div class="fourthpage">
+            <div class="fourthcard" id="Trendingstocks"     onclick="redirectTo('trending.html')">
+                <img src="trending.jpg" alt="Trending stocks">
+                <div class="caption">Trending Stocks</div>
+            </div>
+            <div class="fourthcard" id="ai" onclick="redirectTo('Chatbot.html')">
+                <img src="ai-expert.jpg" alt="Talk to our AI expert">
+                <div class="caption">Talk to Our AI Expert</div>
+            </div>
+            <div class="fourthcard" id="Learn"     onclick="redirectTo('learn-invest.html')">
+                <img src="learn-invest.jpg" alt="Learn and invest at one place">
+                <div class="caption">Learn and Invest at One Place</div>
+            </div>
+            <div class="fourthcard" id="financeplan" onclick="redirectTo('getplan.html')">
+                <img src="finance-plan.jpg" alt="Get your personal finance plan">
+                <div class="caption">Get Your Personal Finance Plan</div>
+            </div>
+            <div class="fourthcard" id="tax" onclick="redirectTo('tax-tools.html')">
+                <img src="tax-tools.png" alt="Best tax saving tools">
+                <div class="caption">Best Tax Saving Tools</div>
+            </div>
+            <div class="fourthcard" id="demat" onclick="redirectTo('open-demat.html')">
+                <img src="demat.png" alt="Open a Demat account">
+                <div class="caption">Open a Demat Account</div>
+            </div>
+        </div>
+    </div>
+    <div class="hello"></div>
+    
+</body>
+</html>

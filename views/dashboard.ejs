@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - User Financial Data</title>
+    <link rel="stylesheet" href="/dashboard.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Dashboard</h1>
+        <p>Review your financial information below:</p>
+
+        <% if (users.length === 0) { %>
+            <p>No data available. Please submit your information.</p>
+        <% } else { %>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Full Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Monthly Income</th>
+                        <th>Monthly Expenses</th>
+                        <th>Savings Balance</th>
+                        <th>Loan Type</th>
+                        <th>Loan Balance</th>
+                        <th>EMI Amount</th>
+                        <th>Investment Goals</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% users.forEach(user => { %>
+                        <tr>
+                            <td><%= user.name %></td>
+                            <td><%= user.email %></td>
+                            <td><%= user.phone %></td>
+                            <td><%= user.monthly_income %></td>
+                            <td><%= user.monthly_expenses %></td>
+                            <td><%= user.savings_balance %></td>
+                            <td><%= user.loan_type %></td>
+                            <td><%= user.loan_balance %></td>
+                            <td><%= user.emi_amount %></td>
+                            <td><%= user.investment_goals %></td>
+                        </tr>
+                    <% }) %>
+                </tbody>
+            </table>
+        <% } %>
+    </div>
+    <script>
+        // Function to redirect the user to the finance plan page based on user ID
+        function redirectTo(userId) {
+            window.location.href = `/generate-plan/${userId}`;
+        }
+    </script>
+    
+</body>
+</html>

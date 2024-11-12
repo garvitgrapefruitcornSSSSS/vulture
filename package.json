@@ -1,0 +1,27 @@
+{
+  "dependencies": {
+    "application.js": "^1.3.5",
+    "bcrypt": "^5.1.1",
+    "body-parser": "^1.20.3",
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.10",
+    "express": "^4.21.1",
+    "express-session": "^1.18.1",
+    "express.js": "^1.0.0",
+    "index.js": "^0.0.3",
+    "mongoose": "^8.8.0",
+    "pg": "^8.13.1",
+    "view.js": "^4.1.0"
+  },
+  "name": "horizon",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

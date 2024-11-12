@@ -1,0 +1,541 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #F4F5F7;
+    /* Neutral Background */
+    color: #0D1B2A;
+    /* Deep Indigo Text */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.2rem 1rem;
+    /* Reduced padding for a smaller navbar */
+    background-color: #fbfbfd;
+    /* Primary Deep Indigo */
+    color: #fcfbfe;
+    position: sticky;
+}
+
+
+.brand {
+    display: flex;
+    align-items: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.brand-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #31274a;
+    text-decoration: none;
+    margin-right: 0.5rem;
+    font-family: "Playfair Display", serif;
+    padding-bottom: 22px;
+}
+
+.slogan {
+    font-size: 0.7rem;
+    color: #3a2e55;
+    /* Highlight: Soft Gold */
+    position: relative;
+    top: 15px;
+    right: 90px;
+    white-space: nowrap;
+
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin: 0 1rem;
+}
+
+.nav-links a {
+    font-family: "Fjalla One", sans-serif;
+    color: grey;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #3a2e55;
+    /* Accent: Turquoise */
+}
+
+.nav-links {
+
+    display: flex;
+    list-style: none;
+    margin-right: auto;
+    /* This pushes the nav links to the left */
+}
+
+.auth-buttons {
+    display: flex;
+}
+
+.signin-btn {
+    color: #0b0b0b;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    margin-left: 0.5rem;
+    /* Shifts button slightly to the right */
+    border: 1px solid #0b0b0b;
+    /* Adds a thinner border */
+    border-radius: 15px;
+    /* Adjusts border-radius if needed */
+    font-weight: bold;
+    /* Makes text bold */
+    transition: background-color 0.3s;
+}
+
+
+.signin-btn:hover {
+    background-color:#D6B7F5;
+    /* Accent: Bright Cyan */
+}
+
+
+
+
+.banner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* Align items to the start of the flex container */
+    justify-content: center;
+    text-align: center;
+    padding: 3rem 2rem;
+    background-image: url(background.jpg);
+    background-color: #191023;
+    /* Fallback color */
+    background-size: cover;
+    background-position: center;
+    color: #f4e9e9;
+    width: 100%;
+    height: 600px;
+    font-size: 1.2rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+    /* Optional text shadow */
+}
+
+.banner-logo {
+
+    width: 30px;
+    height: auto;
+    position: relative;
+    bottom: 180px;
+    margin-left: 10px;
+}
+
+.banner h1 {
+    display: inline-block;
+    /* Keeps heading inline */
+    max-width: 400px;
+    margin: 0;
+    /* Reset margin */
+    margin-left: 20px;
+    /* Slight margin from the left */
+    margin-bottom: 200px;
+    /* Adjust this value as needed */
+    line-height: 1.4;
+    text-align: left;
+    position: relative;
+    margin-top: 120px;
+
+}
+
+@media (max-width: 600px) {
+    .banner {
+        padding: 2rem 1rem;
+        font-size: 1rem;
+
+    }
+
+    .banner h1 {
+        max-width: 100%;
+        text-align: center;
+        /* Center-align on small screens */
+        margin-left: 0;
+        /* Reset left margin for small screens */
+        margin-right: 0;
+        /* Reset right margin for small screens */
+
+    }
+}
+
+
+
+
+
+
+
+.learn-more-btn {
+    padding: 0.8rem;
+    background-color: #FFB300;
+    /* Highlight: Soft Gold */
+    color: #0D1B2A;
+    /* Text color */
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.learn-more-btn:hover {
+    background-color: #FFD700;
+}
+
+.card {
+    width: 1920px;
+    height: 1800px;
+    padding: none;
+    margin: none;
+    object-fit: cover;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #F2ECFD;
+    /* Your background color */
+}
+
+.my-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 30px;
+    background-color:  #A089B8;
+    /* Background color for the page */
+    font-family: Arial, sans-serif;
+    color: #F2ECFD;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+}
+
+.mypagecontainer {
+    display: flex;
+    gap: 40px;
+    /* Space between card container and carousel */
+    max-width: 1200px;
+    width: 100%;
+    align-items: center;
+}
+
+/* Flip Card Styling */
+.card-container {
+    display: flex;
+    gap: 45px;
+    /* Space between the two cards */
+    width: 600px;
+    /* Adjust width to control space taken by the card container */
+    margin-left: 50px;
+    /* Ensures it's aligned left */
+    margin-right: auto;
+}
+
+.flip-card {
+    perspective: 1000px;
+    flex: 1;
+    /* Ensures each card takes equal space within the container */
+
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.flip-card-front {
+    background-color: #43165C;
+    color: #F2ECFD;
+}
+
+.flip-card-back {
+    background-color: #F2ECFD;
+    color: #232222;
+    transform: rotateY(180deg);
+}
+
+/* Carousel Styling */
+.carousel {
+    position: relative;
+    width: 100%; /* Make carousel responsive */
+    max-width: 400px; /* Set maximum width */
+    height: 600px; /* Set height */
+    overflow: hidden;
+    border-radius: 10px;
+    display: inline-block;
+    margin-right: 70px;
+}
+
+.carousel img {
+    width: 100%; /* Image width matches carousel */
+    height: 100%; /* Image height matches carousel */
+    object-fit: cover;
+    border-radius: 10px;
+    display: none; /* Hide all images initially */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.carousel img.active {
+    display: block; /* Only display the active image */
+    transform: scale(1.05); /* Slight enlargement on activation */
+    opacity: 1; /* Smooth fade-in effect */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Dots Styling */
+.dots {
+    position: absolute;
+    bottom: 15px; /* Position below the carousel */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    z-index: 10;
+}
+
+.dot {
+    height: 12px;
+    width: 12px;
+    background-color: #f9f6f6;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.3s, transform 0.2s;
+}
+
+.dot:hover {
+    opacity: 1;
+    transform: scale(1.2); /* Slight enlargement on hover */
+}
+
+.dot.active {
+    background-color: #d7d429;
+    opacity: 1;
+    transform: scale(1.3); /* Increase size of active dot */
+}
+.hello{
+    background-image: url(middleclass.png);
+        display: flex;
+        border-radius: 30px;
+        margin-left: 35px;
+        margin-right: 6px;
+        margin-bottom: 5px;
+        margin-top: 5px;
+
+        flex-direction: column;
+        align-items: flex-start;
+        /* Align items to the start of the flex container */
+        justify-content: center;
+        text-align: center;
+        padding: 3rem 2rem;
+        background-color: #191023;
+        /* Fallback color */
+        background-size: cover;
+        background-position: center;
+        color: #dd1b1b;
+        width: 95%;
+        height: 800px;
+
+        /* Optional text shadow */
+    }
+    .hello {
+        background-image: url('middleclass.png');
+        background-color:violet; /* Background color behind image */
+        background-blend-mode:multiply; /* Options: multiply, screen, overlay, etc. */
+        background-size: cover;
+        background-position: center;
+    }
+.fourth{
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #A089B8; 
+    border-radius: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+.fourthpage {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 2500px;
+    gap: 50px;
+}
+.fourthcard{
+    width: 300px;
+    position: relative;
+    margin-left: 85px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+.fourthcard img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.fourthcard:hover {
+    transform: scale(1.05);
+}
+
+.caption {
+    position: relative;
+    bottom: 0px;
+    margin-top: 10px;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    background: #492B77;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+/* Hover effect for caption animation */
+.fourthcard:hover .caption {
+    transform: translateY(-10px);
+}
+
+/* Animation for headings on the target pages */
+.content h1 {
+    font-size: 2em;
+    text-align: center;
+    margin-top: 20px;
+    animation: slideIn 0.8s ease forwards;
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+#Learn img {
+    width: 110%; /* Reduce width by 10% */
+    display: block;
+    margin: 0 auto;} /* Center the image */
+    #ai img{
+        width: 110%; /* Reduce width by 10% */
+        display: block;
+        margin: 0 auto;
+        height: 60%;
+        margin-top: 5px;
+    }
+    #tax img{
+        width: 110%; /* Reduce width by 10% */
+        display: block;
+        margin: 0 auto;
+    }
+    #demat img{
+        width:115%;
+        display: block;
+        margin: 0 auto;
+        margin-right: 15px;
+    }
+
+    #ai .caption{
+        position: relative;
+        bottom: 0px;
+        margin-top: 10px;
+        width: 110%;
+        padding: 10px;
+        text-align: center;
+        background: #492B77;
+        color: white;
+        font-weight: bold;
+        transition: 0.3s ease;
+    }
+    #Learn .caption{
+        position: relative;
+        bottom: 0px;
+        margin-top: 10px;
+        width: 110%;
+        padding: 10px;
+        text-align: center;
+        background: #492B77;
+        color: white;
+        font-weight: bold;
+        transition: 0.3s ease;
+    }
+    #tax .caption{
+        position: relative;
+        bottom: 0px;
+        margin-top: 10px;
+        width: 110%;
+        padding: 10px;
+        text-align: center;
+        background: #492B77;
+        color: white;
+        font-weight: bold;
+        transition: 0.3s ease;
+    }
+    #demat .caption{
+        position: relative;
+        bottom: 0px;
+        margin-top: 10px;
+        width: 115%;
+        padding: 10px;
+        text-align: center;
+        background: #492B77;
+        color: white;
+        font-weight: bold;
+        transition: 0.3s ease;
+    }
+
+
+
+
+
+
+
+
